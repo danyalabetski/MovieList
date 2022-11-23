@@ -1,7 +1,7 @@
 import UIKit
 
 protocol AddNewFilmRouterInput {
-    
+    func goToTheNextScreen(completion: @escaping((String) -> Void))
 }
 
 final class AddNewFilmRouter {
@@ -21,5 +21,7 @@ final class AddNewFilmRouter {
 }
 
 extension AddNewFilmRouter: AddNewFilmRouterInput {
-    
+    func goToTheNextScreen(completion: @escaping((String) -> Void)) {
+        let _ = AddNameScreenRouter(navigationController: navigationControoler, window: window, completion: completion)
+    }
 }
