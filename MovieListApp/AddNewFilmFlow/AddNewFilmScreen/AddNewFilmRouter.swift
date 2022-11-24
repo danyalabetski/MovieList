@@ -1,14 +1,15 @@
 import UIKit
 
 protocol AddNewFilmRouterInput {
-    func goToTheNextScreen(completion: @escaping((String) -> Void))
+    func goToTheAddNameScreen(completion: @escaping ((String) -> Void))
+    func goToTheAddRatingScreen(completion: @escaping ((String) -> Void))
 }
 
 final class AddNewFilmRouter {
-    
+
     private let navigationControoler: UINavigationController
     private let window: UIWindow
-    
+
     init(navigationControoler: UINavigationController, window: UIWindow) {
         self.navigationControoler = navigationControoler
         self.window = window
@@ -17,11 +18,14 @@ final class AddNewFilmRouter {
         view.presenter = presenter
         navigationControoler.pushViewController(view, animated: true)
     }
-    
 }
 
 extension AddNewFilmRouter: AddNewFilmRouterInput {
-    func goToTheNextScreen(completion: @escaping((String) -> Void)) {
-        let _ = AddNameScreenRouter(navigationController: navigationControoler, window: window, completion: completion)
+    func goToTheAddNameScreen(completion: @escaping ((String) -> Void)) {
+        _ = AddNameScreenRouter(navigationController: navigationControoler, window: window, completion: completion)
+    }
+
+    func goToTheAddRatingScreen(completion: @escaping ((String) -> Void)) {
+        _ = AddRatingRouter(navigationController: navigationControoler, window: window, completion: completion)
     }
 }

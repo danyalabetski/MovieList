@@ -7,7 +7,7 @@ final class AddNameScreenView: UIViewController {
 
     // MARK: - Properties
 
-    var presenter: AddNameScreenPresenter!
+    var presenter: AddNameScreenPresenterProtocol?
 
     // MARK: Public
     // MARK: Private
@@ -34,7 +34,7 @@ final class AddNameScreenView: UIViewController {
     // MARK: - Setups
 
     private func configurationSetupAppearance() {
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
 
         filmNameLabel.font = UIFont(name: "Manrope-Medium", size: 24)
         filmNameLabel.text = "Film Name"
@@ -88,7 +88,7 @@ final class AddNameScreenView: UIViewController {
     // MARK: - Helpers
 
     @objc private func saveNameDidTapped() {
-        presenter.saveName(text: filmNameTextField.text ?? "")
+        presenter?.saveName(text: filmNameTextField.text ?? "")
     }
 }
 

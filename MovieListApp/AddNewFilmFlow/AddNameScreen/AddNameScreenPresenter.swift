@@ -7,8 +7,8 @@ final class AddNameScreenPresenter: AddNameScreenPresenterProtocol {
     
     var completionUpdateName: ((String) -> Void)?
 
-    unowned let view: AddNameScreenView
-    private let router: AddNameScreenRouter
+    unowned let view: AddNameScreenViewProtocol
+    private let router: AddNameScreenRouterOutput
 
     init(view: AddNameScreenView, router: AddNameScreenRouter) {
         self.view = view

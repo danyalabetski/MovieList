@@ -3,13 +3,14 @@ import UIKit
 
 protocol AddNewFilmViewProtocol: AnyObject {
     func updateNameMovieLabel(text: String)
+    func updateRatingMovieLabel(text: String)
 }
 
 final class AddNewFilmView: UIViewController {
 
     // MARK: - Properties
 
-    var presenter: AddNewFilmPresenter?
+    var presenter: AddNewFilmPresenterProtocol?
 
     // MARK: Public
     // MARK: Private
@@ -30,6 +31,9 @@ final class AddNewFilmView: UIViewController {
     private let yourYouTubeLinkMovieLabel = UILabel()
     private let changeReleaseDateButton = UIButton()
     private let changeYouTubeLinkButton = UIButton()
+    
+    private let descriptionLabel = UILabel()
+    private let descriptionTextView = UITextView()
 
     // MARK: - Lifecycle
 
@@ -47,8 +51,6 @@ final class AddNewFilmView: UIViewController {
         configurationSetupContraints()
     }
 
-    // MARK: - API
-
     // MARK: - Setups
 
     private func configurationSetupMainListView() {
@@ -61,7 +63,7 @@ final class AddNewFilmView: UIViewController {
     }
 
     private func configurationSetupBehavior() {
-        view.addSubviews(view: viewCircle, photoSelectionButton, nameMovieLabel, ratingLabel, yourNameMovieLabel, yourRatingMovieLabel, changeNameButton, changeRatingButton, releaseDateMovieLabel, youTubeLinkLabel, yourReleaseDateMovieLabel, yourYouTubeLinkMovieLabel, changeReleaseDateButton, changeYouTubeLinkButton)
+        view.addSubviews(view: viewCircle, photoSelectionButton, nameMovieLabel, ratingLabel, yourNameMovieLabel, yourRatingMovieLabel, changeNameButton, changeRatingButton, releaseDateMovieLabel, youTubeLinkLabel, yourReleaseDateMovieLabel, yourYouTubeLinkMovieLabel, changeReleaseDateButton, changeYouTubeLinkButton, descriptionLabel, descriptionTextView)
 
         changeNameButton.addTarget(self, action: #selector(changeNameButtonDidTapped), for: .touchUpInside)
         changeRatingButton.addTarget(self, action: #selector(changeRatingButtonDidTapped), for: .touchUpInside)
@@ -77,20 +79,25 @@ final class AddNewFilmView: UIViewController {
 
         photoSelectionButton.setImage(UIImage(named: "gallary"), for: .normal)
 
-        nameMovieLabel.setupCustomLabel(text: "Name")
-        ratingLabel.setupCustomLabel(text: "Your Rating")
-        yourNameMovieLabel.setupCustomLabel(text: "-")
+        nameMovieLabel.setupCustomLabel(text: "Name", size: 18)
+        ratingLabel.setupCustomLabel(text: "Your Rating", size: 18)
+        yourNameMovieLabel.setupCustomLabel(text: "-", size: 18)
         yourNameMovieLabel.textAlignment = .center
-        yourRatingMovieLabel.setupCustomLabel(text: "-")
+        yourRatingMovieLabel.setupCustomLabel(text: "-", size: 18)
         changeNameButton.setupCustomButton(name: "Change")
         changeRatingButton.setupCustomButton(name: "Change")
 
-        releaseDateMovieLabel.setupCustomLabel(text: "Release Date")
-        youTubeLinkLabel.setupCustomLabel(text: "YouTube Link")
-        yourReleaseDateMovieLabel.setupCustomLabel(text: "-")
-        yourYouTubeLinkMovieLabel.setupCustomLabel(text: "-")
+        releaseDateMovieLabel.setupCustomLabel(text: "Release Date", size: 18)
+        youTubeLinkLabel.setupCustomLabel(text: "YouTube Link", size: 18)
+        yourReleaseDateMovieLabel.setupCustomLabel(text: "-", size: 18)
+        yourYouTubeLinkMovieLabel.setupCustomLabel(text: "-", size: 18)
         changeReleaseDateButton.setupCustomButton(name: "Change")
         changeYouTubeLinkButton.setupCustomButton(name: "Change")
+        
+        descriptionLabel.setupCustomLabel(text: "Description", size: 18)
+        descriptionTextView.font = UIFont(name: "Manrope-Regular", size: 14)
+        descriptionTextView.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        
     }
 
     private func configurationSetupContraints() {
@@ -147,10 +154,59 @@ final class AddNewFilmView: UIViewController {
         }
         
         releaseDateMovieLabel.snp.makeConstraints { make in
-            make.width.equalTo(125)
-            make.height.equalTo(26)
             make.top.equalTo(changeNameButton.snp.bottom).inset(-32)
             make.left.equalToSuperview().inset(40)
+        }
+        
+        youTubeLinkLabel.snp.makeConstraints { make in
+            make.top.equalTo(changeRatingButton.snp.bottom).inset(-32)
+            make.right.equalToSuperview().inset(40)
+        }
+        
+        yourReleaseDateMovieLabel.snp.makeConstraints { make in
+            make.top.equalTo(releaseDateMovieLabel.snp.bottom).inset(-6)
+            make.left.equalTo(10)
+            make.right.equalTo(viewCircle.snp.centerX)
+        }
+
+        yourYouTubeLinkMovieLabel.snp.makeConstraints { make in
+            make.top.equalTo(youTubeLinkLabel.snp.bottom).inset(-6)
+            make.right.equalTo(-10)
+            make.left.equalTo(viewCircle.snp.centerX)
+        }
+        
+        changeReleaseDateButton.snp.makeConstraints { make in
+            make.width.equalTo(91.44)
+            make.height.equalTo(27)
+            make.top.equalTo(yourReleaseDateMovieLabel.snp.bottom).inset(-6)
+            make.right.equalTo(-57.36)
+        }
+
+        changeYouTubeLinkButton.snp.makeConstraints { make in
+            make.width.equalTo(91.44)
+            make.height.equalTo(27)
+            make.top.equalTo(yourYouTubeLinkMovieLabel.snp.bottom).inset(-6)
+            make.left.equalTo(56.2)
+        }
+        
+        descriptionLabel.snp.makeConstraints { make in
+            make.top.equalTo(changeReleaseDateButton.snp.bottom).inset(-36)
+            make.left.equalToSuperview().inset(32)
+            make.right.equalToSuperview().inset(32)
+        }
+        
+        descriptionTextView.snp.makeConstraints { make in
+            make.top.equalTo(descriptionLabel.snp.bottom).inset(-11)
+            make.left.equalToSuperview().inset(32)
+            make.right.equalToSuperview().inset(32)
+            make.bottom.equalToSuperview().inset(47)
+        }
+    }
+    
+    private func placeholderTextView(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "With Spider-Man's identity now revealed, Peter asks Doctor Strange..."
+            textView.textColor = .lightGray
         }
     }
 
@@ -185,7 +241,9 @@ final class AddNewFilmView: UIViewController {
         presenter?.changeNameAction()
     }
 
-    @objc private func changeRatingButtonDidTapped() {}
+    @objc private func changeRatingButtonDidTapped() {
+        presenter?.changeRatingAction()
+    }
 }
 
 extension AddNewFilmView: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -208,5 +266,9 @@ extension AddNewFilmView: UIImagePickerControllerDelegate, UINavigationControlle
 extension AddNewFilmView: AddNewFilmViewProtocol {
     func updateNameMovieLabel(text: String) {
         yourNameMovieLabel.text = text
+    }
+    
+    func updateRatingMovieLabel(text: String) {
+        yourRatingMovieLabel.text = text
     }
 }

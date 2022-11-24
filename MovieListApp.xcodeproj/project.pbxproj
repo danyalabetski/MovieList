@@ -25,6 +25,10 @@
 		953DD1BD2927DD37009EEC76 /* AddNameScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953DD1BC2927DD37009EEC76 /* AddNameScreenPresenter.swift */; };
 		953DD1BF2927DD42009EEC76 /* AddNameScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953DD1BE2927DD42009EEC76 /* AddNameScreenRouter.swift */; };
 		953DD1CC2928B27E009EEC76 /* SetupWeightFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953DD1C42928B27E009EEC76 /* SetupWeightFonts.swift */; };
+		95BCF9C7292EE89000FD6D07 /* AddRatingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9C6292EE89000FD6D07 /* AddRatingScreenView.swift */; };
+		95BCF9C9292EE89800FD6D07 /* AddRatingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9C8292EE89800FD6D07 /* AddRatingPresenter.swift */; };
+		95BCF9CB292EE8A000FD6D07 /* AddRatingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9CA292EE8A000FD6D07 /* AddRatingRouter.swift */; };
+		95BCF9CD292F712D00FD6D07 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9CC292F712D00FD6D07 /* Film.swift */; };
 		95F76017292EDB53006CCA9B /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F76010292EDB53006CCA9B /* Manrope-Regular.ttf */; };
 		95F76018292EDB53006CCA9B /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F76011292EDB53006CCA9B /* Manrope-SemiBold.ttf */; };
 		95F76019292EDB53006CCA9B /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F76012292EDB53006CCA9B /* Manrope-Light.ttf */; };
@@ -59,6 +63,10 @@
 		953DD1BC2927DD37009EEC76 /* AddNameScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameScreenPresenter.swift; sourceTree = "<group>"; };
 		953DD1BE2927DD42009EEC76 /* AddNameScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameScreenRouter.swift; sourceTree = "<group>"; };
 		953DD1C42928B27E009EEC76 /* SetupWeightFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupWeightFonts.swift; sourceTree = "<group>"; };
+		95BCF9C6292EE89000FD6D07 /* AddRatingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRatingScreenView.swift; sourceTree = "<group>"; };
+		95BCF9C8292EE89800FD6D07 /* AddRatingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRatingPresenter.swift; sourceTree = "<group>"; };
+		95BCF9CA292EE8A000FD6D07 /* AddRatingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRatingRouter.swift; sourceTree = "<group>"; };
+		95BCF9CC292F712D00FD6D07 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		95F76010292EDB53006CCA9B /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
 		95F76011292EDB53006CCA9B /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
 		95F76012292EDB53006CCA9B /* Manrope-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Light.ttf"; sourceTree = "<group>"; };
@@ -125,6 +133,7 @@
 				953386082923F6070048AA58 /* Assets.xcassets */,
 				9533860D2923F6070048AA58 /* Info.plist */,
 				953386052923F6060048AA58 /* MovieListApp.xcdatamodeld */,
+				95BCF9CC292F712D00FD6D07 /* Film.swift */,
 			);
 			path = MovieListApp;
 			sourceTree = "<group>";
@@ -180,6 +189,7 @@
 			children = (
 				9533861A2924DD400048AA58 /* AddNewFilmScreen */,
 				953DD1B92927DD15009EEC76 /* AddNameScreen */,
+				95BCF9C5292EE85800FD6D07 /* AddRatingScreen */,
 			);
 			path = AddNewFilmFlow;
 			sourceTree = "<group>";
@@ -234,6 +244,16 @@
 				953DD1C42928B27E009EEC76 /* SetupWeightFonts.swift */,
 			);
 			path = "Setup Fonts";
+			sourceTree = "<group>";
+		};
+		95BCF9C5292EE85800FD6D07 /* AddRatingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				95BCF9C6292EE89000FD6D07 /* AddRatingScreenView.swift */,
+				95BCF9C8292EE89800FD6D07 /* AddRatingPresenter.swift */,
+				95BCF9CA292EE8A000FD6D07 /* AddRatingRouter.swift */,
+			);
+			path = AddRatingScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,8 +381,12 @@
 				953386012923F6060048AA58 /* MainListView.swift in Sources */,
 				953386262924EABA0048AA58 /* Extension+UIView.swift in Sources */,
 				953386162924CBD40048AA58 /* MainListPresenter.swift in Sources */,
+				95BCF9C7292EE89000FD6D07 /* AddRatingScreenView.swift in Sources */,
+				95BCF9CD292F712D00FD6D07 /* Film.swift in Sources */,
 				953DD1CC2928B27E009EEC76 /* SetupWeightFonts.swift in Sources */,
 				953DD1BD2927DD37009EEC76 /* AddNameScreenPresenter.swift in Sources */,
+				95BCF9CB292EE8A000FD6D07 /* AddRatingRouter.swift in Sources */,
+				95BCF9C9292EE89800FD6D07 /* AddRatingPresenter.swift in Sources */,
 				953DD1BF2927DD42009EEC76 /* AddNameScreenRouter.swift in Sources */,
 				9533862A292564230048AA58 /* Extension+UILabel.swift in Sources */,
 				951579ED29257292009E67A2 /* Extension+UIButton.swift in Sources */,

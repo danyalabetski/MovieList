@@ -1,12 +1,12 @@
 protocol AddNewFilmPresenterProtocol {
     func changeNameAction()
-    
+    func changeRatingAction()
 }
 
 final class AddNewFilmPresenter: AddNewFilmPresenterProtocol {
 
-    unowned let view: AddNewFilmView
-    private let router: AddNewFilmRouter
+    unowned let view: AddNewFilmViewProtocol
+    private let router: AddNewFilmRouterInput
 
     init(view: AddNewFilmView, router: AddNewFilmRouter) {
         self.view = view
@@ -14,8 +14,14 @@ final class AddNewFilmPresenter: AddNewFilmPresenterProtocol {
     }
 
     func changeNameAction() {
-        router.goToTheNextScreen { [weak self] text in
+        router.goToTheAddNameScreen { [weak self] text in
             self?.view.updateNameMovieLabel(text: text)
+        }
+    }
+    
+    func changeRatingAction() {
+        router.goToTheAddRatingScreen { [weak self] text in
+            self?.view.updateRatingMovieLabel(text: text)
         }
     }
 }
