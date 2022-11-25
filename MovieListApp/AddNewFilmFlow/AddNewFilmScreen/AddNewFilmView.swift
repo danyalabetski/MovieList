@@ -212,7 +212,16 @@ final class AddNewFilmView: UIViewController {
 
     // MARK: - Helpers
 
-    @objc private func saveButtonDidTapped() {}
+    @objc private func saveButtonDidTapped() {
+    
+        guard let png = viewCircle.image?.pngData() else { return }
+        
+        let film = Film(name: yourNameMovieLabel.text ?? "",
+                        rating: yourRatingMovieLabel.text ?? "",
+                        imageFilm: png)
+        
+        CoreDataManager.shared.saveFilm(film)
+    }
 
     @objc private func photoSelectionButtonDidTapped() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)

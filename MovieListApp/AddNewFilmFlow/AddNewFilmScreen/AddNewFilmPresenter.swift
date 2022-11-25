@@ -8,7 +8,7 @@ final class AddNewFilmPresenter: AddNewFilmPresenterProtocol {
     unowned let view: AddNewFilmViewProtocol
     private let router: AddNewFilmRouterInput
 
-    init(view: AddNewFilmView, router: AddNewFilmRouter) {
+    init(view: AddNewFilmViewProtocol, router: AddNewFilmRouterInput) {
         self.view = view
         self.router = router
     }

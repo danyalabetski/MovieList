@@ -10,6 +10,7 @@
 	<array>
 		<string>Manrope-Medium.ttf</string>
 		<string>Manrope-Regular.ttf</string>
+		<string>Manrope-Bold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

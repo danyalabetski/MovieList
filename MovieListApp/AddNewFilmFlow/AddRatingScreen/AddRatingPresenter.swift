@@ -11,7 +11,7 @@ final class AddRatingPresenter: AddRatingPresenterProtocol {
     unowned let view: AddRatingScreenViewProtocol
     private let router: AddRatingRouterOutput
     
-    init(view: AddRatingScreenView, router: AddRatingRouterOutput) {
+    init(view: AddRatingScreenViewProtocol, router: AddRatingRouterOutput) {
         self.view = view
         self.router = router
     }

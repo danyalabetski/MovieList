@@ -3,6 +3,6 @@
     <entity name="FilmEntity" representedClassName="FilmEntity" syncable="YES" codeGenerationType="class">
         <attribute name="imageFilm" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="rating" optional="YES" attributeType="String"/>
     </entity>
 </model>

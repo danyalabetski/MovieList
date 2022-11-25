@@ -29,6 +29,11 @@
 		95BCF9C9292EE89800FD6D07 /* AddRatingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9C8292EE89800FD6D07 /* AddRatingPresenter.swift */; };
 		95BCF9CB292EE8A000FD6D07 /* AddRatingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9CA292EE8A000FD6D07 /* AddRatingRouter.swift */; };
 		95BCF9CD292F712D00FD6D07 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9CC292F712D00FD6D07 /* Film.swift */; };
+		95BCF9CF292F841E00FD6D07 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9CE292F841E00FD6D07 /* CoreDataManager.swift */; };
+		95BCF9D6292FBD9600FD6D07 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9D5292FBD9600FD6D07 /* CustomTableViewCell.swift */; };
+		95BCF9FF2930F65900FD6D07 /* AddReleaseDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9FE2930F65900FD6D07 /* AddReleaseDateView.swift */; };
+		95BCFA012930F66000FD6D07 /* AddReleaseDatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCFA002930F66000FD6D07 /* AddReleaseDatePresenter.swift */; };
+		95BCFA032930F66700FD6D07 /* AddReleaseDateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCFA022930F66700FD6D07 /* AddReleaseDateRouter.swift */; };
 		95F76017292EDB53006CCA9B /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F76010292EDB53006CCA9B /* Manrope-Regular.ttf */; };
 		95F76018292EDB53006CCA9B /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F76011292EDB53006CCA9B /* Manrope-SemiBold.ttf */; };
 		95F76019292EDB53006CCA9B /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F76012292EDB53006CCA9B /* Manrope-Light.ttf */; };
@@ -67,6 +72,11 @@
 		95BCF9C8292EE89800FD6D07 /* AddRatingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRatingPresenter.swift; sourceTree = "<group>"; };
 		95BCF9CA292EE8A000FD6D07 /* AddRatingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRatingRouter.swift; sourceTree = "<group>"; };
 		95BCF9CC292F712D00FD6D07 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		95BCF9CE292F841E00FD6D07 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		95BCF9D5292FBD9600FD6D07 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		95BCF9FE2930F65900FD6D07 /* AddReleaseDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReleaseDateView.swift; sourceTree = "<group>"; };
+		95BCFA002930F66000FD6D07 /* AddReleaseDatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReleaseDatePresenter.swift; sourceTree = "<group>"; };
+		95BCFA022930F66700FD6D07 /* AddReleaseDateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReleaseDateRouter.swift; sourceTree = "<group>"; };
 		95F76010292EDB53006CCA9B /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
 		95F76011292EDB53006CCA9B /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
 		95F76012292EDB53006CCA9B /* Manrope-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Light.ttf"; sourceTree = "<group>"; };
@@ -130,10 +140,10 @@
 				953386132924CB1C0048AA58 /* Core */,
 				953386222924E55B0048AA58 /* AddNewFilmFlow */,
 				953386212924E53B0048AA58 /* MovieScreenFlow */,
+				95BCF9D0292F845A00FD6D07 /* CoreDataFlow */,
 				953386082923F6070048AA58 /* Assets.xcassets */,
 				9533860D2923F6070048AA58 /* Info.plist */,
 				953386052923F6060048AA58 /* MovieListApp.xcdatamodeld */,
-				95BCF9CC292F712D00FD6D07 /* Film.swift */,
 			);
 			path = MovieListApp;
 			sourceTree = "<group>";
@@ -180,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				953386142924CB260048AA58 /* MainListScreen */,
+				95BCF9D5292FBD9600FD6D07 /* CustomTableViewCell.swift */,
 			);
 			path = MovieScreenFlow;
 			sourceTree = "<group>";
@@ -190,6 +201,7 @@
 				9533861A2924DD400048AA58 /* AddNewFilmScreen */,
 				953DD1B92927DD15009EEC76 /* AddNameScreen */,
 				95BCF9C5292EE85800FD6D07 /* AddRatingScreen */,
+				95BCF9FD2930F60600FD6D07 /* AddReleaseDate */,
 			);
 			path = AddNewFilmFlow;
 			sourceTree = "<group>";
@@ -254,6 +266,25 @@
 				95BCF9CA292EE8A000FD6D07 /* AddRatingRouter.swift */,
 			);
 			path = AddRatingScreen;
+			sourceTree = "<group>";
+		};
+		95BCF9D0292F845A00FD6D07 /* CoreDataFlow */ = {
+			isa = PBXGroup;
+			children = (
+				95BCF9CC292F712D00FD6D07 /* Film.swift */,
+				95BCF9CE292F841E00FD6D07 /* CoreDataManager.swift */,
+			);
+			path = CoreDataFlow;
+			sourceTree = "<group>";
+		};
+		95BCF9FD2930F60600FD6D07 /* AddReleaseDate */ = {
+			isa = PBXGroup;
+			children = (
+				95BCF9FE2930F65900FD6D07 /* AddReleaseDateView.swift */,
+				95BCFA002930F66000FD6D07 /* AddReleaseDatePresenter.swift */,
+				95BCFA022930F66700FD6D07 /* AddReleaseDateRouter.swift */,
+			);
+			path = AddReleaseDate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,8 +408,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95BCFA012930F66000FD6D07 /* AddReleaseDatePresenter.swift in Sources */,
 				9533861C2924DD7E0048AA58 /* AddNewFilmView.swift in Sources */,
 				953386012923F6060048AA58 /* MainListView.swift in Sources */,
+				95BCF9D6292FBD9600FD6D07 /* CustomTableViewCell.swift in Sources */,
 				953386262924EABA0048AA58 /* Extension+UIView.swift in Sources */,
 				953386162924CBD40048AA58 /* MainListPresenter.swift in Sources */,
 				95BCF9C7292EE89000FD6D07 /* AddRatingScreenView.swift in Sources */,
@@ -389,11 +422,14 @@
 				95BCF9C9292EE89800FD6D07 /* AddRatingPresenter.swift in Sources */,
 				953DD1BF2927DD42009EEC76 /* AddNameScreenRouter.swift in Sources */,
 				9533862A292564230048AA58 /* Extension+UILabel.swift in Sources */,
+				95BCF9CF292F841E00FD6D07 /* CoreDataManager.swift in Sources */,
 				951579ED29257292009E67A2 /* Extension+UIButton.swift in Sources */,
 				953386202924DD890048AA58 /* AddNewFilmRouter.swift in Sources */,
 				953385FD2923F6060048AA58 /* AppDelegate.swift in Sources */,
 				953DD1BB2927DD31009EEC76 /* AddNameScreenView.swift in Sources */,
+				95BCFA032930F66700FD6D07 /* AddReleaseDateRouter.swift in Sources */,
 				953386182924CBEF0048AA58 /* MainListRouter.swift in Sources */,
+				95BCF9FF2930F65900FD6D07 /* AddReleaseDateView.swift in Sources */,
 				953386072923F6060048AA58 /* MovieListApp.xcdatamodeld in Sources */,
 				953385FF2923F6060048AA58 /* SceneDelegate.swift in Sources */,
 				9533861E2924DD840048AA58 /* AddNewFilmPresenter.swift in Sources */,

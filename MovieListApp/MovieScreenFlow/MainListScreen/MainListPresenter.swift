@@ -1,13 +1,20 @@
 protocol MainListPresenterProtocol {
     func actionNextScreen()
+    var movies: [Film] { get set }
 }
 
 final class MainListPresenter: MainListPresenterProtocol {
     
-    unowned let view: MainListView
-    private let router: MainListRouter
+    var movies = [Film]() {
+        didSet {
+            view.updateTableView()
+        }
+    }
     
-    init(view: MainListView, router: MainListRouter) {
+    unowned let view: MainListViewProtocol
+    private let router: MainListRouterInput
+    
+    init(view: MainListViewProtocol, router: MainListRouterInput) {
         self.view = view
         self.router = router
     }

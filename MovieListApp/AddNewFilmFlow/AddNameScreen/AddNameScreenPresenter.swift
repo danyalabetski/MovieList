@@ -10,7 +10,7 @@ final class AddNameScreenPresenter: AddNameScreenPresenterProtocol {
     unowned let view: AddNameScreenViewProtocol
     private let router: AddNameScreenRouterOutput
 
-    init(view: AddNameScreenView, router: AddNameScreenRouter) {
+    init(view: AddNameScreenViewProtocol, router: AddNameScreenRouterOutput) {
         self.view = view
         self.router = router
     }
