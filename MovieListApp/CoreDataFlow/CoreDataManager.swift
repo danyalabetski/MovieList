@@ -16,6 +16,9 @@ final class CoreDataManager {
             movie.setValue(film.name, forKey: "name")
             movie.setValue(film.rating, forKey: "rating")
             movie.setValue(film.imageFilm, forKey: "imageFilm")
+            movie.setValue(film.releaseDateMovie, forKey: "releaseDateMovie")
+            movie.setValue(film.youTubeLink, forKey: "youTubeLink")
+            movie.setValue(film.descriptin, forKey: "descriptin")
 
             do {
                 try managerContext.save()
@@ -46,7 +49,17 @@ final class CoreDataManager {
                 let name = object.value(forKey: "name") as? String ?? ""
                 let rating = object.value(forKey: "rating") as? String ?? ""
                 let imageFilm = object.value(forKey: "imageFilm") as? Data ?? Data()
-                let film = Film(name: name, rating: rating, imageFilm: imageFilm)
+                let releaseDateMovie = object.value(forKey: "releaseDateMovie") as? String ?? ""
+                let youTubeLink = object.value(forKey: "youTubeLink") as? URL ?? URL(fileURLWithPath: "https://www.youtube.com")
+                let descriptin = object.value(forKey: "descriptin") as? String ?? ""
+                
+                let film = Film(name: name,
+                                rating: rating,
+                                imageFilm: imageFilm,
+                                releaseDateMovie: releaseDateMovie,
+                                youTubeLink: youTubeLink,
+                                descriptin: descriptin)
+                
                 films.append(film)
             }
 

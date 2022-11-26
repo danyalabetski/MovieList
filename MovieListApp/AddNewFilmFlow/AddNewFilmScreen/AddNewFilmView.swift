@@ -4,6 +4,8 @@ import UIKit
 protocol AddNewFilmViewProtocol: AnyObject {
     func updateNameMovieLabel(text: String)
     func updateRatingMovieLabel(text: String)
+    func updateReleaseDateMovieLabel(date: Date)
+    func updateYouTubeLinkMovieLabel(text: String)
 }
 
 final class AddNewFilmView: UIViewController {
@@ -67,8 +69,10 @@ final class AddNewFilmView: UIViewController {
 
         changeNameButton.addTarget(self, action: #selector(changeNameButtonDidTapped), for: .touchUpInside)
         changeRatingButton.addTarget(self, action: #selector(changeRatingButtonDidTapped), for: .touchUpInside)
-        photoSelectionButton.addTarget(self, action: #selector(photoSelectionButtonDidTapped), for: .touchUpInside)
+        changeReleaseDateButton.addTarget(self, action: #selector(changeReleaseDateDidTapped), for: .touchUpInside)
+        changeYouTubeLinkButton.addTarget(self, action: #selector(changeYouTubeLinkDidTapped), for: .touchUpInside)
         
+        photoSelectionButton.addTarget(self, action: #selector(photoSelectionButtonDidTapped), for: .touchUpInside)
     }
 
     private func configurationSetupAppearance() {
@@ -175,14 +179,14 @@ final class AddNewFilmView: UIViewController {
             make.left.equalTo(viewCircle.snp.centerX)
         }
         
-        changeReleaseDateButton.snp.makeConstraints { make in
+        changeYouTubeLinkButton.snp.makeConstraints { make in
             make.width.equalTo(91.44)
             make.height.equalTo(27)
             make.top.equalTo(yourReleaseDateMovieLabel.snp.bottom).inset(-6)
             make.right.equalTo(-57.36)
         }
-
-        changeYouTubeLinkButton.snp.makeConstraints { make in
+        
+        changeReleaseDateButton.snp.makeConstraints { make in
             make.width.equalTo(91.44)
             make.height.equalTo(27)
             make.top.equalTo(yourYouTubeLinkMovieLabel.snp.bottom).inset(-6)
@@ -218,7 +222,10 @@ final class AddNewFilmView: UIViewController {
         
         let film = Film(name: yourNameMovieLabel.text ?? "",
                         rating: yourRatingMovieLabel.text ?? "",
-                        imageFilm: png)
+                        imageFilm: png,
+                        releaseDateMovie: yourReleaseDateMovieLabel.text ?? "",
+                        youTubeLink: URL(fileURLWithPath: yourYouTubeLinkMovieLabel.text ?? ""),
+                        descriptin: descriptionTextView.text ?? "")
         
         CoreDataManager.shared.saveFilm(film)
     }
@@ -253,6 +260,14 @@ final class AddNewFilmView: UIViewController {
     @objc private func changeRatingButtonDidTapped() {
         presenter?.changeRatingAction()
     }
+    
+    @objc private func changeReleaseDateDidTapped() {
+        presenter?.changeReleaseDateAction()
+    }
+    
+    @objc private func changeYouTubeLinkDidTapped() {
+        presenter?.changeYouTubeLinkAction()
+    }
 }
 
 extension AddNewFilmView: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -279,5 +294,13 @@ extension AddNewFilmView: AddNewFilmViewProtocol {
     
     func updateRatingMovieLabel(text: String) {
         yourRatingMovieLabel.text = text
+    }
+    
+    func updateReleaseDateMovieLabel(date: Date) {
+        yourReleaseDateMovieLabel.text = date.description
+    }
+    
+    func updateYouTubeLinkMovieLabel(text: String) {
+        yourYouTubeLinkMovieLabel.text = text
     }
 }

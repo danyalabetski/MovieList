@@ -1,23 +1,22 @@
 import UIKit
 
-protocol AddReleaseDateRouterOutput {
-    func addReleaseDateScreen(date: Date)
+protocol AddYouTubeLinkRouterOutput {
+    func addYouTubeLinkScreen(text: String)
 }
 
-final class AddReleaseDateRouter {
-    
+final class AddYouTubeLinkRouter {
     private let navigationController: UINavigationController
     private let window: UIWindow
     
-    let completion: ((Date) -> Void)
+    let completion: ((String) -> Void)
     
-    init(navigationController: UINavigationController, window: UIWindow, completion: @escaping ((Date) -> Void)) {
+    init(navigationController: UINavigationController, window: UIWindow, completion: @escaping ((String) -> Void)) {
         self.navigationController = navigationController
         self.window = window
         self.completion = completion
         
-        let view = AddReleaseDateView()
-        let presenter = AddReleaseDatePresenter(view: view, router: self)
+        let view = AddYouTubeLinkView()
+        let presenter = AddYouTubeLinkPresenter(view: view, router: self)
         view.presenter = presenter
         navigationController.pushViewController(view, animated: true)
         
@@ -25,11 +24,10 @@ final class AddReleaseDateRouter {
             self?.completion($0)
         }
     }
-    
 }
 
-extension AddReleaseDateRouter: AddReleaseDateRouterOutput {
-    func addReleaseDateScreen(date: Date) {
+extension AddYouTubeLinkRouter: AddYouTubeLinkRouterOutput {
+    func addYouTubeLinkScreen(text: String) {
         navigationController.popViewController(animated: true)
     }
 }
