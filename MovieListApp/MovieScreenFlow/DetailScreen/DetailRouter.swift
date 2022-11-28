@@ -7,7 +7,7 @@ final class DetailRouter {
     private let navigationController: UINavigationController
     private let window: UIWindow
 
-    init(navigationController: UINavigationController, window: UIWindow, modelFilm: Film) {
+    init(navigationController: UINavigationController, window: UIWindow) {
         self.navigationController = navigationController
         self.window = window
 

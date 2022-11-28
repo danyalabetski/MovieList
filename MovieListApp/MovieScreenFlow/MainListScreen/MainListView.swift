@@ -96,7 +96,6 @@ extension MainListView: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.moveDetailView(model: movies[indexPath.row])
         
     }
 

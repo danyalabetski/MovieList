@@ -2,7 +2,7 @@ import Foundation
 
 protocol MainListPresenterProtocol {
     func actionNextScreen()
-    func moveDetailView(model: Film)
+    func moveDetailView()
 //    var movies: [Film] { get }
 }
 
@@ -26,7 +26,7 @@ final class MainListPresenter: MainListPresenterProtocol {
         router.goToTheNextScreen()
     }
 
-    func moveDetailView(model: Film) {
-        router.goToTheDetailScreen(modeFilm: model)
+    func moveDetailView() {
+        router.goToTheDetailScreen()
     }
 }
