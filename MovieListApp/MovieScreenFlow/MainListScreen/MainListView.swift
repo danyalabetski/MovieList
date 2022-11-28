@@ -5,7 +5,7 @@ protocol MainListViewProtocol: AnyObject {
 }
 
 final class MainListView: UIViewController {
-    
+
     var movies = [Film]() {
         didSet {
             tableView.reloadData()
@@ -13,6 +13,7 @@ final class MainListView: UIViewController {
     }
 
     // MARK: - Properties
+
     var presenter: MainListPresenterProtocol!
 
     // MARK: Public
@@ -35,10 +36,10 @@ final class MainListView: UIViewController {
 
         configurationSetupConstraints()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         movies = CoreDataManager.shared.getMovie()
     }
 
@@ -56,11 +57,11 @@ final class MainListView: UIViewController {
 
     private func configurationSetupBehavior() {
         view.addSubviews(view: tableView)
-        
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
-        
+
         tableView.allowsSelection = false
     }
 
@@ -85,21 +86,22 @@ extension MainListView: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell else { return UITableViewCell() }
-        
+
         let movie = movies[indexPath.row]
         cell.movieImageView.image = UIImage(data: movie.imageFilm)
         cell.movieNameLabel.text = movie.name
         cell.movieRatingLabel.text = "\(movie.rating)/10"
-        
+
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.moveDetailView(model: movies[indexPath.row])
         
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 212
+        212
     }
 }
 

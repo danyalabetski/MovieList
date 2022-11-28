@@ -2,13 +2,14 @@ import UIKit
 
 protocol MainListRouterInput {
     func goToTheNextScreen()
+    func goToTheDetailScreen(modeFilm: Film)
 }
 
 final class MainListRouter {
-    
+
     private let navigationController: UINavigationController
     private let window: UIWindow
-    
+
     init(navigationController: UINavigationController, window: UIWindow) {
         self.navigationController = navigationController
         self.window = window
@@ -17,11 +18,14 @@ final class MainListRouter {
         view.presenter = presenter
         navigationController.pushViewController(view, animated: true)
     }
-    
 }
 
 extension MainListRouter: MainListRouterInput {
     func goToTheNextScreen() {
-        let _ = AddNewFilmRouter(navigationControoler: navigationController, window: window)
+        _ = AddNewFilmRouter(navigationControoler: navigationController, window: window)
+    }
+
+    func goToTheDetailScreen(modeFilm: Film) {
+        _ = DetailRouter(navigationController: navigationController, window: window, modelFilm: modeFilm)
     }
 }

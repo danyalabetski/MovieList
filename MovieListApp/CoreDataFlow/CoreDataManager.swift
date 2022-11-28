@@ -52,14 +52,14 @@ final class CoreDataManager {
                 let releaseDateMovie = object.value(forKey: "releaseDateMovie") as? String ?? ""
                 let youTubeLink = object.value(forKey: "youTubeLink") as? URL ?? URL(fileURLWithPath: "https://www.youtube.com")
                 let descriptin = object.value(forKey: "descriptin") as? String ?? ""
-                
+
                 let film = Film(name: name,
                                 rating: rating,
                                 imageFilm: imageFilm,
                                 releaseDateMovie: releaseDateMovie,
                                 youTubeLink: youTubeLink,
                                 descriptin: descriptin)
-                
+
                 films.append(film)
             }
 
