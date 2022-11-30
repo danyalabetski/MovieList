@@ -6,6 +6,6 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="rating" optional="YES" attributeType="String"/>
         <attribute name="releaseDateMovie" optional="YES" attributeType="String"/>
-        <attribute name="youTubeLink" optional="YES" attributeType="URI"/>
+        <attribute name="youTubeLink" optional="YES" attributeType="String"/>
     </entity>
 </model>

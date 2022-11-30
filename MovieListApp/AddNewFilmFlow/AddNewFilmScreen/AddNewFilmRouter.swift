@@ -5,6 +5,7 @@ protocol AddNewFilmRouterInput {
     func goToTheAddRatingScreen(completion: @escaping ((String) -> Void))
     func goToTheAddReleaseDate(completion: @escaping ((Date) -> Void))
     func goToTheAddYouTubeLink(completion: @escaping ((String) -> Void))
+    func backMainViewController()
 }
 
 final class AddNewFilmRouter {
@@ -30,12 +31,16 @@ extension AddNewFilmRouter: AddNewFilmRouterInput {
     func goToTheAddRatingScreen(completion: @escaping ((String) -> Void)) {
         _ = AddRatingRouter(navigationController: navigationControoler, window: window, completion: completion)
     }
-    
+
     func goToTheAddReleaseDate(completion: @escaping ((Date) -> Void)) {
         _ = AddReleaseDateRouter(navigationController: navigationControoler, window: window, completion: completion)
     }
-    
+
     func goToTheAddYouTubeLink(completion: @escaping ((String) -> Void)) {
         _ = AddYouTubeLinkRouter(navigationController: navigationControoler, window: window, completion: completion)
+    }
+
+    func backMainViewController() {
+        navigationControoler.popViewController(animated: true)
     }
 }

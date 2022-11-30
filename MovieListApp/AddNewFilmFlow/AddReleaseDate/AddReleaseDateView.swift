@@ -42,9 +42,10 @@ final class AddReleaseDateView: UIViewController {
 
         let currentDate = Date()
         var components = DateComponents()
+
         components.calendar = calendar
 
-        components.year = -18
+        components.year = -10
         components.month = 12
         let maxDate = calendar.date(byAdding: components, to: currentDate)!
 
@@ -53,7 +54,7 @@ final class AddReleaseDateView: UIViewController {
 
         releaseDatePicker.minimumDate = minDate
         releaseDatePicker.maximumDate = maxDate
-        
+
         saveButton.addTarget(self, action: #selector(saveButtonDidTapped), for: .touchUpInside)
     }
 
@@ -62,7 +63,7 @@ final class AddReleaseDateView: UIViewController {
 
         releaseDatePicker.preferredDatePickerStyle = .wheels
         releaseDatePicker.datePickerMode = .date
-        
+
         saveButton.setupCustomButton(name: "Save")
     }
 
@@ -79,7 +80,7 @@ final class AddReleaseDateView: UIViewController {
             make.left.right.equalToSuperview()
             make.height.equalTo(194)
         }
-        
+
         saveButton.snp.makeConstraints { make in
             make.top.equalTo(releaseDatePicker.snp.bottom).inset(-32)
             make.left.equalToSuperview().inset(148)
@@ -88,7 +89,7 @@ final class AddReleaseDateView: UIViewController {
     }
 
     // MARK: - Helpers
-    
+
     @objc private func saveButtonDidTapped() {
         presenter?.saveDate(date: releaseDatePicker.date)
     }

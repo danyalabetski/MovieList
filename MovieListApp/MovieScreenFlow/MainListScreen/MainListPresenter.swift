@@ -2,17 +2,18 @@ import Foundation
 
 protocol MainListPresenterProtocol {
     func actionNextScreen()
-    func moveDetailView()
-//    var movies: [Film] { get }
+    func selectMovie(movie: Film)
+    func loadMovies()
+    var movies: [Film] { get }
 }
 
 final class MainListPresenter: MainListPresenterProtocol {
-
-//    var movies = [Film]() {
-//        didSet {
-//            self.view.updateTableView()
-//        }
-//    }
+    
+    var movies = [Film]() {
+        didSet {
+            self.view.setFilms(movies)
+        }
+    }
 
     unowned let view: MainListViewProtocol
     private let router: MainListRouterInput
@@ -25,8 +26,12 @@ final class MainListPresenter: MainListPresenterProtocol {
     func actionNextScreen() {
         router.goToTheNextScreen()
     }
-
-    func moveDetailView() {
-        router.goToTheDetailScreen()
+    
+    func selectMovie(movie: Film) {
+        router.goToTheDetailScreen(movie: movie)
+    }
+    
+    func loadMovies() {
+        movies = CoreDataManager.shared.getMovie()
     }
 }

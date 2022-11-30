@@ -6,6 +6,6 @@ struct Film {
     let rating: String
     var imageFilm: Data
     let releaseDateMovie: String
-    let youTubeLink: URL
+    let youTubeLink: String
     let descriptin: String
 }

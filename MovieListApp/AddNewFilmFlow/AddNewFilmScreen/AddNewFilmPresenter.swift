@@ -5,10 +5,12 @@ protocol AddNewFilmPresenterProtocol {
     func changeRatingAction()
     func changeReleaseDateAction()
     func changeYouTubeLinkAction()
+    func saveDataAndBackViewController()
+    func saveData(name: String, rating: String, imageFilm: Data, releaseDateMovie: String, youTubeLink: String, descriptin: String)
 }
 
 final class AddNewFilmPresenter: AddNewFilmPresenterProtocol {
-    
+
     unowned let view: AddNewFilmViewProtocol
     private let router: AddNewFilmRouterInput
 
@@ -22,22 +24,43 @@ final class AddNewFilmPresenter: AddNewFilmPresenterProtocol {
             self?.view.updateNameMovieLabel(text: text)
         }
     }
-    
+
     func changeRatingAction() {
         router.goToTheAddRatingScreen { [weak self] text in
             self?.view.updateRatingMovieLabel(text: text)
         }
     }
-    
+
     func changeReleaseDateAction() {
         router.goToTheAddReleaseDate { [weak self] date in
-            self?.view.updateReleaseDateMovieLabel(date: date)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd MMMM yyyy"
+            self?.view.updateReleaseDateMovieLabel(date: dateFormatter.string(from: date))
         }
     }
-    
+
     func changeYouTubeLinkAction() {
         router.goToTheAddYouTubeLink { [weak self] text in
             self?.view.updateYouTubeLinkMovieLabel(text: text)
+        }
+    }
+
+    func saveDataAndBackViewController() {
+        router.backMainViewController()
+    }
+
+    func saveData(name: String, rating: String, imageFilm: Data, releaseDateMovie: String, youTubeLink: String, descriptin: String) {
+        if name != "-", rating != "-", releaseDateMovie != "-" {
+            let film = Film(name: name,
+                            rating: rating,
+                            imageFilm: imageFilm,
+                            releaseDateMovie: releaseDateMovie,
+                            youTubeLink: youTubeLink,
+                            descriptin: descriptin)
+
+            CoreDataManager.shared.saveFilm(film)
+        } else {
+            return
         }
     }
 }

@@ -29,6 +29,8 @@ final class CustomTableViewCell: UITableViewCell {
 
     private func configurationSetupBehavior() {
         addSubviews(view: movieImageView, movieNameLabel, movieRatingLabel)
+        
+        selectionStyle = .none
     }
 
     private func configurationSetupAppearance() {

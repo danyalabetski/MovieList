@@ -1,7 +1,7 @@
 import UIKit
 
 protocol MainListViewProtocol: AnyObject {
-    func updateTableView()
+    func setFilms(_ film: [Film])
 }
 
 final class MainListView: UIViewController {
@@ -40,7 +40,7 @@ final class MainListView: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        movies = CoreDataManager.shared.getMovie()
+        presenter.loadMovies()
     }
 
     // MARK: - API
@@ -61,8 +61,6 @@ final class MainListView: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
-
-        tableView.allowsSelection = false
     }
 
     private func configurationSetupAppearance() {}
@@ -96,7 +94,7 @@ extension MainListView: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        presenter.selectMovie(movie: movies[indexPath.row])
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -105,7 +103,7 @@ extension MainListView: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension MainListView: MainListViewProtocol {
-    func updateTableView() {
-        tableView.reloadData()
+    func setFilms(_ film: [Film]) {
+        movies = film
     }
 }

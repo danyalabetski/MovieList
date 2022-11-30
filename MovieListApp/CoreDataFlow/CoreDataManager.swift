@@ -50,7 +50,7 @@ final class CoreDataManager {
                 let rating = object.value(forKey: "rating") as? String ?? ""
                 let imageFilm = object.value(forKey: "imageFilm") as? Data ?? Data()
                 let releaseDateMovie = object.value(forKey: "releaseDateMovie") as? String ?? ""
-                let youTubeLink = object.value(forKey: "youTubeLink") as? URL ?? URL(fileURLWithPath: "https://www.youtube.com")
+                let youTubeLink = object.value(forKey: "youTubeLink") as? String ?? ""
                 let descriptin = object.value(forKey: "descriptin") as? String ?? ""
 
                 let film = Film(name: name,

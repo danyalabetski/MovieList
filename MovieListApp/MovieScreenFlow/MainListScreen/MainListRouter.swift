@@ -2,7 +2,7 @@ import UIKit
 
 protocol MainListRouterInput {
     func goToTheNextScreen()
-    func goToTheDetailScreen()
+    func goToTheDetailScreen(movie: Film)
 }
 
 final class MainListRouter {
@@ -25,7 +25,7 @@ extension MainListRouter: MainListRouterInput {
         _ = AddNewFilmRouter(navigationControoler: navigationController, window: window)
     }
 
-    func goToTheDetailScreen() {
-        _ = DetailRouter(navigationController: navigationController, window: window)
+    func goToTheDetailScreen(movie: Film) {
+        _ = DetailRouter(navigationController: navigationController, window: window, movie: movie)
     }
 }
