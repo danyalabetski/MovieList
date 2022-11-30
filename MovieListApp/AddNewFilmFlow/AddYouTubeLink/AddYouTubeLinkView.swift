@@ -35,7 +35,7 @@ final class AddYouTubeLinkView: UIViewController {
     // MARK: - Setups
 
     private func configurationSetupAppearance() {
-        view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        view.backgroundColor = UIColor(named: "CustomColor")
 
         filmYouTubeLinkLabel.font = UIFont(name: "Manrope-Medium", size: 24)
         filmYouTubeLinkLabel.text = "YouTube Link"

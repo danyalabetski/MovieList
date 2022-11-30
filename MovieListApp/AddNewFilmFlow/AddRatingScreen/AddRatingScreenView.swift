@@ -47,7 +47,7 @@ final class AddRatingScreenView: UIViewController {
     }
 
     private func configurationSetupAppearance() {
-        view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        view.backgroundColor = UIColor(named: "CustomColor")
 
         ratingLabel.setupCustomLabel(text: "Your Rating", size: 24)
 

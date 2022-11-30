@@ -43,12 +43,11 @@ final class MainListView: UIViewController {
         presenter.loadMovies()
     }
 
-    // MARK: - API
     // MARK: - Setups
 
     private func configurationSetupMainListView() {
         title = "My Movie List"
-        view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        view.backgroundColor = UIColor(named: "CustomColor")
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,

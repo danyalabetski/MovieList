@@ -34,7 +34,7 @@ final class AddReleaseDateView: UIViewController {
     // MARK: - Setups
 
     private func configurationSetupBehavior() {
-        view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        view.backgroundColor = UIColor(named: "CustomColor")
 
         view.addSubviews(view: releaseDateLabel, releaseDatePicker, saveButton)
 

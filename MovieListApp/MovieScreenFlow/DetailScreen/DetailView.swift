@@ -51,9 +51,9 @@ final class DetailView: UIViewController {
     }
 
     private func configurationSetupAppearance() {
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(named: "CustomColor")
 
-        detailView.backgroundColor = .white
+        detailView.backgroundColor = UIColor(named: "CustomColor")
         detailView.layer.cornerRadius = 16
 
         starImage.image = UIImage(systemName: "star.fill")

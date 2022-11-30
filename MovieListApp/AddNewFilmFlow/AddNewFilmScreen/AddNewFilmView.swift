@@ -57,7 +57,7 @@ final class AddNewFilmView: UIViewController {
 
     private func configurationSetupMainListView() {
         title = "Add new"
-        view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        view.backgroundColor = UIColor(named: "CustomColor")
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save,
                                                             target: self,
@@ -100,19 +100,19 @@ final class AddNewFilmView: UIViewController {
 
         descriptionLabel.setupCustomLabel(text: "Description", size: 18)
         descriptionTextView.font = UIFont(name: "Manrope-Regular", size: 14)
-        descriptionTextView.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        descriptionTextView.backgroundColor = UIColor(named: "CustomColor")
     }
 
     private func configurationSetupContraints() {
         viewCircle.snp.makeConstraints { make in
             make.width.height.equalTo(150)
-            make.top.equalToSuperview().inset(167)
+            make.top.equalToSuperview().inset(137)
             make.left.equalToSuperview().inset(113)
         }
 
         photoSelectionButton.snp.makeConstraints { make in
             make.width.height.equalTo(70)
-            make.top.equalToSuperview().inset(207)
+            make.top.equalToSuperview().inset(177)
             make.left.equalToSuperview().inset(153)
         }
 
@@ -193,23 +193,16 @@ final class AddNewFilmView: UIViewController {
         }
 
         descriptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(changeReleaseDateButton.snp.bottom).inset(-36)
+            make.top.equalTo(changeReleaseDateButton.snp.bottom).inset(-20)
             make.left.equalToSuperview().inset(32)
             make.right.equalToSuperview().inset(32)
         }
 
         descriptionTextView.snp.makeConstraints { make in
-            make.top.equalTo(descriptionLabel.snp.bottom).inset(-11)
+            make.top.equalTo(descriptionLabel.snp.bottom).inset(-6)
             make.left.equalToSuperview().inset(32)
             make.right.equalToSuperview().inset(32)
             make.bottom.equalToSuperview().inset(47)
-        }
-    }
-
-    private func placeholderTextView(_ textView: UITextView) {
-        if textView.text.isEmpty {
-            textView.text = "With Spider-Man's identity now revealed, Peter asks Doctor Strange..."
-            textView.textColor = .lightGray
         }
     }
 

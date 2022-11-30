@@ -34,7 +34,7 @@ final class AddNameScreenView: UIViewController {
     // MARK: - Setups
 
     private func configurationSetupAppearance() {
-        view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        view.backgroundColor = UIColor(named: "CustomColor")
 
         filmNameLabel.font = UIFont(name: "Manrope-Medium", size: 24)
         filmNameLabel.text = "Film Name"
