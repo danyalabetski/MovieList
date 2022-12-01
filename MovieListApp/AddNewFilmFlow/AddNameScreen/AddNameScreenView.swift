@@ -1,7 +1,9 @@
 import SnapKit
 import UIKit
 
-protocol AddNameScreenViewProtocol: AnyObject {}
+protocol AddNameScreenViewProtocol: AnyObject {
+    func alertError()
+}
 
 final class AddNameScreenView: UIViewController {
 
@@ -92,4 +94,11 @@ final class AddNameScreenView: UIViewController {
     }
 }
 
-extension AddNameScreenView: AddNameScreenViewProtocol {}
+extension AddNameScreenView: AddNameScreenViewProtocol {
+    func alertError() {
+        let alertController = UIAlertController(title: "Error", message: "Add text please", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true)
+    }
+}

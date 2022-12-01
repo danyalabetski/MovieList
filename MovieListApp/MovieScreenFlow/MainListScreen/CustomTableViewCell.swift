@@ -29,16 +29,14 @@ final class CustomTableViewCell: UITableViewCell {
 
     private func configurationSetupBehavior() {
         addSubviews(view: movieImageView, movieNameLabel, movieRatingLabel)
-        
+
         selectionStyle = .none
     }
 
     private func configurationSetupAppearance() {
         movieImageView.contentMode = .scaleToFill
-        movieImageView.layer.shadowColor = UIColor.black.cgColor
-        movieImageView.layer.shadowOffset = CGSize(width: 0.0, height: -2.0)
-        movieImageView.layer.shadowRadius = 3.0
-        movieImageView.layer.shadowOpacity = 0.08
+        movieImageView.layer.shadowRadius = 4
+        movieImageView.layer.shadowOffset = CGSize(width: 20, height: 10)
         movieImageView.layer.masksToBounds = false
 
         movieNameLabel.font = UIFont(name: "Manrope-Medium", size: 18)
@@ -69,5 +67,4 @@ final class CustomTableViewCell: UITableViewCell {
             make.bottom.equalToSuperview().inset(50)
         }
     }
-
 }

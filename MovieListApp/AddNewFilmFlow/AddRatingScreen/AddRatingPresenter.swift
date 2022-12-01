@@ -5,24 +5,27 @@ protocol AddRatingPresenterProtocol {
 }
 
 final class AddRatingPresenter: AddRatingPresenterProtocol {
-    
+
     var completion: ((String) -> Void)?
-    
+
     unowned let view: AddRatingScreenViewProtocol
     private let router: AddRatingRouterOutput
-    
+
     init(view: AddRatingScreenViewProtocol, router: AddRatingRouterOutput) {
         self.view = view
         self.router = router
     }
-    
+
     func fillArray() -> [Double] {
-        return Array(stride(from: 0.0, to: 10.1, by: 0.1)).reversed()
+        Array(stride(from: 0.0, to: 10.1, by: 0.1)).reversed()
     }
-    
+
     func saveRating(text: String) {
-        completion?(text)
-        router.addRatingFilmScreen(text: text)
+        if text != "" {
+            completion?(text)
+            router.addRatingFilmScreen(text: text)
+        } else {
+            view.alertError()
+        }
     }
-    
 }

@@ -50,7 +50,7 @@ final class AddNewFilmPresenter: AddNewFilmPresenterProtocol {
     }
 
     func saveData(name: String, rating: String, imageFilm: Data, releaseDateMovie: String, youTubeLink: String, descriptin: String) {
-        if name != "-", rating != "-", releaseDateMovie != "-" {
+        if name != "", rating != "", releaseDateMovie != "" {
             let film = Film(name: name,
                             rating: rating,
                             imageFilm: imageFilm,

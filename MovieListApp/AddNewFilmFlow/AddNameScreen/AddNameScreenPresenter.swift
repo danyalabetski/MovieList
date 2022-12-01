@@ -16,7 +16,11 @@ final class AddNameScreenPresenter: AddNameScreenPresenterProtocol {
     }
     
     func saveName(text: String) {
-        completionUpdateName?(text)
-        router.addNameFilmScreen(text: text)
+        if text != "" {
+            completionUpdateName?(text)
+            router.addNameFilmScreen(text: text)
+        } else {
+            view.alertError()
+        }
     }
 }

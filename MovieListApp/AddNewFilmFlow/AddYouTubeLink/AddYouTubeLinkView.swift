@@ -1,7 +1,9 @@
 import SnapKit
 import UIKit
 
-protocol AddYouTubeLinkViewProtocol: AnyObject {}
+protocol AddYouTubeLinkViewProtocol: AnyObject {
+    func alertError()
+}
 
 final class AddYouTubeLinkView: UIViewController {
 
@@ -93,4 +95,11 @@ final class AddYouTubeLinkView: UIViewController {
     }
 }
 
-extension AddYouTubeLinkView: AddYouTubeLinkViewProtocol {}
+extension AddYouTubeLinkView: AddYouTubeLinkViewProtocol {
+    func alertError() {
+        let alertController = UIAlertController(title: "Error", message: "Add text please", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true)
+    }
+}

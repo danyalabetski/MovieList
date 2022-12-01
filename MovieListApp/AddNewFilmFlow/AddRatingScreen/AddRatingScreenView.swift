@@ -1,7 +1,9 @@
 import SnapKit
 import UIKit
 
-protocol AddRatingScreenViewProtocol: AnyObject {}
+protocol AddRatingScreenViewProtocol: AnyObject {
+    func alertError()
+}
 
 final class AddRatingScreenView: UIViewController {
 
@@ -42,7 +44,7 @@ final class AddRatingScreenView: UIViewController {
         pickerView.delegate = self
         pickerView.dataSource = self
         arrayPickerView = presenter?.fillArray() ?? []
-        
+
         saveRatingButton.addTarget(self, action: #selector(saveRatingDidTappedButton), for: .touchUpInside)
     }
 
@@ -78,7 +80,7 @@ final class AddRatingScreenView: UIViewController {
     }
 
     // MARK: - Helpers
-    
+
     @objc private func saveRatingDidTappedButton() {
         presenter?.saveRating(text: rating ?? "")
     }
@@ -96,10 +98,17 @@ extension AddRatingScreenView: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         String(format: "%.1f", arrayPickerView[row])
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         rating = String(format: "%.1f", arrayPickerView[row])
     }
 }
 
-extension AddRatingScreenView: AddRatingScreenViewProtocol {}
+extension AddRatingScreenView: AddRatingScreenViewProtocol {
+    func alertError() {
+        let alertController = UIAlertController(title: "Error", message: "Add text please", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true)
+    }
+}
