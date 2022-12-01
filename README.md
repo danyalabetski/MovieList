@@ -27,7 +27,8 @@ C --> B
 
 ### Application Overview
 
-![]<img src="[path/to/screenshot.png](https://user-images.githubusercontent.com/99253701/205009251-ffa16202-c5fc-4c46-932b-84dd01e5a892.png)" width="500">
+```sh
+![](https://user-images.githubusercontent.com/99253701/205009251-ffa16202-c5fc-4c46-932b-84dd01e5a892.png)
 
 ![screenThree](https://user-images.githubusercontent.com/99253701/205009969-f6e6ccf9-3ac7-4bd3-9e9f-f1a71c326d78.png)
 
@@ -38,3 +39,4 @@ C --> B
 ![screenFive](https://user-images.githubusercontent.com/99253701/205010076-b89d4650-8929-49b9-9d8e-d44207aad77f.png)
 
 ![screenSix](https://user-images.githubusercontent.com/99253701/205010120-605324a0-9a36-4645-92eb-4cf99be1695e.png)
+```
