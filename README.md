@@ -30,4 +30,4 @@ C --> B
 
 
 
-![Альтернативный текст](https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg)
+![Альтернативный текст](/Users/danek/Desktop/Simulator\Screen\Shot\-\iPhone\14\-\2022-12-01\at\11.24.43.png)
