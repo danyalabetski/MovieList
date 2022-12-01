@@ -27,7 +27,7 @@ C --> B
 
 ### Application Overview
 
-![](https://user-images.githubusercontent.com/99253701/205009251-ffa16202-c5fc-4c46-932b-84dd01e5a892.png)<img src="path/to/screenshot.png" width="500">
+![]<img src="[path/to/screenshot.png](https://user-images.githubusercontent.com/99253701/205009251-ffa16202-c5fc-4c46-932b-84dd01e5a892.png)" width="500">
 
 ![screenThree](https://user-images.githubusercontent.com/99253701/205009969-f6e6ccf9-3ac7-4bd3-9e9f-f1a71c326d78.png)
 
