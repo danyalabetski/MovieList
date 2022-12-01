@@ -30,4 +30,4 @@ C --> B
 
 
 
-![Альтернативный текст](/Users/danek/Desktop/Simulator\Screen\Shot\-\iPhone\14\-\2022-12-01\at\11.24.43.png)
+![Альтернативный текст](/Users/danek/Desktop/Screenshot 2022-12-01 at 11.49.41.png)
