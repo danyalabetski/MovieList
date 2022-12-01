@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951579ED29257292009E67A2 /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951579EC29257292009E67A2 /* Extension+UIButton.swift */; };
 		953385FD2923F6060048AA58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953385FC2923F6060048AA58 /* AppDelegate.swift */; };
 		953385FF2923F6060048AA58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953385FE2923F6060048AA58 /* SceneDelegate.swift */; };
 		953386012923F6060048AA58 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953386002923F6060048AA58 /* MainListView.swift */; };
@@ -18,9 +19,42 @@
 		9533861C2924DD7E0048AA58 /* AddNewFilmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533861B2924DD7E0048AA58 /* AddNewFilmView.swift */; };
 		9533861E2924DD840048AA58 /* AddNewFilmPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533861D2924DD840048AA58 /* AddNewFilmPresenter.swift */; };
 		953386202924DD890048AA58 /* AddNewFilmRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533861F2924DD890048AA58 /* AddNewFilmRouter.swift */; };
+		953386262924EABA0048AA58 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953386252924EABA0048AA58 /* Extension+UIView.swift */; };
+		9533862A292564230048AA58 /* Extension+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95338629292564230048AA58 /* Extension+UILabel.swift */; };
+		953DD1BB2927DD31009EEC76 /* AddNameScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953DD1BA2927DD31009EEC76 /* AddNameScreenView.swift */; };
+		953DD1BD2927DD37009EEC76 /* AddNameScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953DD1BC2927DD37009EEC76 /* AddNameScreenPresenter.swift */; };
+		953DD1BF2927DD42009EEC76 /* AddNameScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953DD1BE2927DD42009EEC76 /* AddNameScreenRouter.swift */; };
+		953DD1CC2928B27E009EEC76 /* SetupWeightFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953DD1C42928B27E009EEC76 /* SetupWeightFonts.swift */; };
+		95BCF9C7292EE89000FD6D07 /* AddRatingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9C6292EE89000FD6D07 /* AddRatingScreenView.swift */; };
+		95BCF9C9292EE89800FD6D07 /* AddRatingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9C8292EE89800FD6D07 /* AddRatingPresenter.swift */; };
+		95BCF9CB292EE8A000FD6D07 /* AddRatingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9CA292EE8A000FD6D07 /* AddRatingRouter.swift */; };
+		95BCF9CD292F712D00FD6D07 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9CC292F712D00FD6D07 /* Film.swift */; };
+		95BCF9CF292F841E00FD6D07 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9CE292F841E00FD6D07 /* CoreDataManager.swift */; };
+		95BCF9D6292FBD9600FD6D07 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9D5292FBD9600FD6D07 /* CustomTableViewCell.swift */; };
+		95BCF9FF2930F65900FD6D07 /* AddReleaseDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCF9FE2930F65900FD6D07 /* AddReleaseDateView.swift */; };
+		95BCFA012930F66000FD6D07 /* AddReleaseDatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCFA002930F66000FD6D07 /* AddReleaseDatePresenter.swift */; };
+		95BCFA032930F66700FD6D07 /* AddReleaseDateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCFA022930F66700FD6D07 /* AddReleaseDateRouter.swift */; };
+		95BCFA082931FB2900FD6D07 /* AddYouTubeLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCFA072931FB2900FD6D07 /* AddYouTubeLinkView.swift */; };
+		95BCFA0A2931FB4B00FD6D07 /* AddYouTubeLinkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCFA092931FB4B00FD6D07 /* AddYouTubeLinkPresenter.swift */; };
+		95BCFA0C2931FB5200FD6D07 /* AddYouTubeLinkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCFA0B2931FB5200FD6D07 /* AddYouTubeLinkRouter.swift */; };
+		95BCFA0F2932653200FD6D07 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCFA0E2932653200FD6D07 /* DetailView.swift */; };
+		95BCFA112932655000FD6D07 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCFA102932655000FD6D07 /* DetailPresenter.swift */; };
+		95BCFA132932655700FD6D07 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BCFA122932655700FD6D07 /* DetailRouter.swift */; };
+		95F76017292EDB53006CCA9B /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F76010292EDB53006CCA9B /* Manrope-Regular.ttf */; };
+		95F76018292EDB53006CCA9B /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F76011292EDB53006CCA9B /* Manrope-SemiBold.ttf */; };
+		95F76019292EDB53006CCA9B /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F76012292EDB53006CCA9B /* Manrope-Light.ttf */; };
+		95F7601A292EDB53006CCA9B /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F76013292EDB53006CCA9B /* Manrope-ExtraLight.ttf */; };
+		95F7601B292EDB53006CCA9B /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F76014292EDB53006CCA9B /* Manrope-Bold.ttf */; };
+		95F7601C292EDB53006CCA9B /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F76015292EDB53006CCA9B /* Manrope-Medium.ttf */; };
+		95F7601D292EDB53006CCA9B /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95F76016292EDB53006CCA9B /* Manrope-ExtraBold.ttf */; };
+		AEDD311F2C84B3F4D6D1EC76 /* Pods_MovieListApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11BF4653A223A394DB65F153 /* Pods_MovieListApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11BF4653A223A394DB65F153 /* Pods_MovieListApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieListApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		609DCBA47444FE16C8FCFC06 /* Pods-MovieListApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieListApp.release.xcconfig"; path = "Target Support Files/Pods-MovieListApp/Pods-MovieListApp.release.xcconfig"; sourceTree = "<group>"; };
+		8F88634EF2654FEB85573078 /* Pods-MovieListApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieListApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieListApp/Pods-MovieListApp.debug.xcconfig"; sourceTree = "<group>"; };
+		951579EC29257292009E67A2 /* Extension+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
 		953385F92923F6060048AA58 /* MovieListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		953385FC2923F6060048AA58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		953385FE2923F6060048AA58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +68,34 @@
 		9533861B2924DD7E0048AA58 /* AddNewFilmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFilmView.swift; sourceTree = "<group>"; };
 		9533861D2924DD840048AA58 /* AddNewFilmPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFilmPresenter.swift; sourceTree = "<group>"; };
 		9533861F2924DD890048AA58 /* AddNewFilmRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFilmRouter.swift; sourceTree = "<group>"; };
+		953386252924EABA0048AA58 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		95338629292564230048AA58 /* Extension+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UILabel.swift"; sourceTree = "<group>"; };
+		953DD1BA2927DD31009EEC76 /* AddNameScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameScreenView.swift; sourceTree = "<group>"; };
+		953DD1BC2927DD37009EEC76 /* AddNameScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameScreenPresenter.swift; sourceTree = "<group>"; };
+		953DD1BE2927DD42009EEC76 /* AddNameScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameScreenRouter.swift; sourceTree = "<group>"; };
+		953DD1C42928B27E009EEC76 /* SetupWeightFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupWeightFonts.swift; sourceTree = "<group>"; };
+		95BCF9C6292EE89000FD6D07 /* AddRatingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRatingScreenView.swift; sourceTree = "<group>"; };
+		95BCF9C8292EE89800FD6D07 /* AddRatingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRatingPresenter.swift; sourceTree = "<group>"; };
+		95BCF9CA292EE8A000FD6D07 /* AddRatingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRatingRouter.swift; sourceTree = "<group>"; };
+		95BCF9CC292F712D00FD6D07 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		95BCF9CE292F841E00FD6D07 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		95BCF9D5292FBD9600FD6D07 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		95BCF9FE2930F65900FD6D07 /* AddReleaseDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReleaseDateView.swift; sourceTree = "<group>"; };
+		95BCFA002930F66000FD6D07 /* AddReleaseDatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReleaseDatePresenter.swift; sourceTree = "<group>"; };
+		95BCFA022930F66700FD6D07 /* AddReleaseDateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReleaseDateRouter.swift; sourceTree = "<group>"; };
+		95BCFA072931FB2900FD6D07 /* AddYouTubeLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddYouTubeLinkView.swift; sourceTree = "<group>"; };
+		95BCFA092931FB4B00FD6D07 /* AddYouTubeLinkPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddYouTubeLinkPresenter.swift; sourceTree = "<group>"; };
+		95BCFA0B2931FB5200FD6D07 /* AddYouTubeLinkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddYouTubeLinkRouter.swift; sourceTree = "<group>"; };
+		95BCFA0E2932653200FD6D07 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		95BCFA102932655000FD6D07 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		95BCFA122932655700FD6D07 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		95F76010292EDB53006CCA9B /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
+		95F76011292EDB53006CCA9B /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
+		95F76012292EDB53006CCA9B /* Manrope-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Light.ttf"; sourceTree = "<group>"; };
+		95F76013292EDB53006CCA9B /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
+		95F76014292EDB53006CCA9B /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
+		95F76015292EDB53006CCA9B /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
+		95F76016292EDB53006CCA9B /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +103,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEDD311F2C84B3F4D6D1EC76 /* Pods_MovieListApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A123B3341329E4B51869794 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11BF4653A223A394DB65F153 /* Pods_MovieListApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5381E0B95FA7BCF3D03AAB6C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F88634EF2654FEB85573078 /* Pods-MovieListApp.debug.xcconfig */,
+				609DCBA47444FE16C8FCFC06 /* Pods-MovieListApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		953385F02923F6060048AA58 = {
 			isa = PBXGroup;
 			children = (
 				953385FB2923F6060048AA58 /* MovieListApp */,
 				953385FA2923F6060048AA58 /* Products */,
+				5381E0B95FA7BCF3D03AAB6C /* Pods */,
+				0A123B3341329E4B51869794 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,9 +148,11 @@
 		953385FB2923F6060048AA58 /* MovieListApp */ = {
 			isa = PBXGroup;
 			children = (
+				953386232924EA9E0048AA58 /* Helper */,
 				953386132924CB1C0048AA58 /* Core */,
 				953386222924E55B0048AA58 /* AddNewFilmFlow */,
 				953386212924E53B0048AA58 /* MovieScreenFlow */,
+				95BCF9D0292F845A00FD6D07 /* CoreDataFlow */,
 				953386082923F6070048AA58 /* Assets.xcassets */,
 				9533860D2923F6070048AA58 /* Info.plist */,
 				953386052923F6060048AA58 /* MovieListApp.xcdatamodeld */,
@@ -92,6 +176,7 @@
 				953386002923F6060048AA58 /* MainListView.swift */,
 				953386152924CBD40048AA58 /* MainListPresenter.swift */,
 				953386172924CBEF0048AA58 /* MainListRouter.swift */,
+				95BCF9D5292FBD9600FD6D07 /* CustomTableViewCell.swift */,
 			);
 			path = MainListScreen;
 			sourceTree = "<group>";
@@ -118,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				953386142924CB260048AA58 /* MainListScreen */,
+				95BCFA0D293264F200FD6D07 /* DetailScreen */,
 			);
 			path = MovieScreenFlow;
 			sourceTree = "<group>";
@@ -126,8 +212,113 @@
 			isa = PBXGroup;
 			children = (
 				9533861A2924DD400048AA58 /* AddNewFilmScreen */,
+				953DD1B92927DD15009EEC76 /* AddNameScreen */,
+				95BCF9C5292EE85800FD6D07 /* AddRatingScreen */,
+				95BCF9FD2930F60600FD6D07 /* AddReleaseDate */,
+				95BCFA062931FAD600FD6D07 /* AddYouTubeLink */,
 			);
 			path = AddNewFilmFlow;
+			sourceTree = "<group>";
+		};
+		953386232924EA9E0048AA58 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				953DD1C02928B27E009EEC76 /* Fonts */,
+				953386242924EAAB0048AA58 /* Extensions */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		953386242924EAAB0048AA58 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				953386252924EABA0048AA58 /* Extension+UIView.swift */,
+				95338629292564230048AA58 /* Extension+UILabel.swift */,
+				951579EC29257292009E67A2 /* Extension+UIButton.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		953DD1B92927DD15009EEC76 /* AddNameScreen */ = {
+			isa = PBXGroup;
+			children = (
+				953DD1BA2927DD31009EEC76 /* AddNameScreenView.swift */,
+				953DD1BC2927DD37009EEC76 /* AddNameScreenPresenter.swift */,
+				953DD1BE2927DD42009EEC76 /* AddNameScreenRouter.swift */,
+			);
+			path = AddNameScreen;
+			sourceTree = "<group>";
+		};
+		953DD1C02928B27E009EEC76 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				953DD1C32928B27E009EEC76 /* Setup Fonts */,
+				95F76014292EDB53006CCA9B /* Manrope-Bold.ttf */,
+				95F76016292EDB53006CCA9B /* Manrope-ExtraBold.ttf */,
+				95F76013292EDB53006CCA9B /* Manrope-ExtraLight.ttf */,
+				95F76012292EDB53006CCA9B /* Manrope-Light.ttf */,
+				95F76015292EDB53006CCA9B /* Manrope-Medium.ttf */,
+				95F76010292EDB53006CCA9B /* Manrope-Regular.ttf */,
+				95F76011292EDB53006CCA9B /* Manrope-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		953DD1C32928B27E009EEC76 /* Setup Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				953DD1C42928B27E009EEC76 /* SetupWeightFonts.swift */,
+			);
+			path = "Setup Fonts";
+			sourceTree = "<group>";
+		};
+		95BCF9C5292EE85800FD6D07 /* AddRatingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				95BCF9C6292EE89000FD6D07 /* AddRatingScreenView.swift */,
+				95BCF9C8292EE89800FD6D07 /* AddRatingPresenter.swift */,
+				95BCF9CA292EE8A000FD6D07 /* AddRatingRouter.swift */,
+			);
+			path = AddRatingScreen;
+			sourceTree = "<group>";
+		};
+		95BCF9D0292F845A00FD6D07 /* CoreDataFlow */ = {
+			isa = PBXGroup;
+			children = (
+				95BCF9CC292F712D00FD6D07 /* Film.swift */,
+				95BCF9CE292F841E00FD6D07 /* CoreDataManager.swift */,
+			);
+			path = CoreDataFlow;
+			sourceTree = "<group>";
+		};
+		95BCF9FD2930F60600FD6D07 /* AddReleaseDate */ = {
+			isa = PBXGroup;
+			children = (
+				95BCF9FE2930F65900FD6D07 /* AddReleaseDateView.swift */,
+				95BCFA002930F66000FD6D07 /* AddReleaseDatePresenter.swift */,
+				95BCFA022930F66700FD6D07 /* AddReleaseDateRouter.swift */,
+			);
+			path = AddReleaseDate;
+			sourceTree = "<group>";
+		};
+		95BCFA062931FAD600FD6D07 /* AddYouTubeLink */ = {
+			isa = PBXGroup;
+			children = (
+				95BCFA072931FB2900FD6D07 /* AddYouTubeLinkView.swift */,
+				95BCFA092931FB4B00FD6D07 /* AddYouTubeLinkPresenter.swift */,
+				95BCFA0B2931FB5200FD6D07 /* AddYouTubeLinkRouter.swift */,
+			);
+			path = AddYouTubeLink;
+			sourceTree = "<group>";
+		};
+		95BCFA0D293264F200FD6D07 /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				95BCFA0E2932653200FD6D07 /* DetailView.swift */,
+				95BCFA102932655000FD6D07 /* DetailPresenter.swift */,
+				95BCFA122932655700FD6D07 /* DetailRouter.swift */,
+			);
+			path = DetailScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +328,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 953386102923F6070048AA58 /* Build configuration list for PBXNativeTarget "MovieListApp" */;
 			buildPhases = (
+				811A7D9E6B20E418D30E160B /* [CP] Check Pods Manifest.lock */,
 				953385F52923F6060048AA58 /* Sources */,
 				953385F62923F6060048AA58 /* Frameworks */,
 				953385F72923F6060048AA58 /* Resources */,
+				136FBF93196D14634624A6ED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,24 +381,95 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95F7601D292EDB53006CCA9B /* Manrope-ExtraBold.ttf in Resources */,
 				9533860C2923F6070048AA58 /* LaunchScreen.storyboard in Resources */,
+				95F7601A292EDB53006CCA9B /* Manrope-ExtraLight.ttf in Resources */,
 				953386092923F6070048AA58 /* Assets.xcassets in Resources */,
+				95F7601B292EDB53006CCA9B /* Manrope-Bold.ttf in Resources */,
+				95F76018292EDB53006CCA9B /* Manrope-SemiBold.ttf in Resources */,
+				95F76017292EDB53006CCA9B /* Manrope-Regular.ttf in Resources */,
+				95F7601C292EDB53006CCA9B /* Manrope-Medium.ttf in Resources */,
+				95F76019292EDB53006CCA9B /* Manrope-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		136FBF93196D14634624A6ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieListApp/Pods-MovieListApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieListApp/Pods-MovieListApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieListApp/Pods-MovieListApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		811A7D9E6B20E418D30E160B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MovieListApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		953385F52923F6060048AA58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95BCFA012930F66000FD6D07 /* AddReleaseDatePresenter.swift in Sources */,
 				9533861C2924DD7E0048AA58 /* AddNewFilmView.swift in Sources */,
 				953386012923F6060048AA58 /* MainListView.swift in Sources */,
+				95BCF9D6292FBD9600FD6D07 /* CustomTableViewCell.swift in Sources */,
+				953386262924EABA0048AA58 /* Extension+UIView.swift in Sources */,
 				953386162924CBD40048AA58 /* MainListPresenter.swift in Sources */,
+				95BCF9C7292EE89000FD6D07 /* AddRatingScreenView.swift in Sources */,
+				95BCF9CD292F712D00FD6D07 /* Film.swift in Sources */,
+				95BCFA132932655700FD6D07 /* DetailRouter.swift in Sources */,
+				95BCFA0A2931FB4B00FD6D07 /* AddYouTubeLinkPresenter.swift in Sources */,
+				95BCFA0F2932653200FD6D07 /* DetailView.swift in Sources */,
+				953DD1CC2928B27E009EEC76 /* SetupWeightFonts.swift in Sources */,
+				953DD1BD2927DD37009EEC76 /* AddNameScreenPresenter.swift in Sources */,
+				95BCF9CB292EE8A000FD6D07 /* AddRatingRouter.swift in Sources */,
+				95BCF9C9292EE89800FD6D07 /* AddRatingPresenter.swift in Sources */,
+				95BCFA082931FB2900FD6D07 /* AddYouTubeLinkView.swift in Sources */,
+				953DD1BF2927DD42009EEC76 /* AddNameScreenRouter.swift in Sources */,
+				9533862A292564230048AA58 /* Extension+UILabel.swift in Sources */,
+				95BCF9CF292F841E00FD6D07 /* CoreDataManager.swift in Sources */,
+				951579ED29257292009E67A2 /* Extension+UIButton.swift in Sources */,
 				953386202924DD890048AA58 /* AddNewFilmRouter.swift in Sources */,
 				953385FD2923F6060048AA58 /* AppDelegate.swift in Sources */,
+				953DD1BB2927DD31009EEC76 /* AddNameScreenView.swift in Sources */,
+				95BCFA032930F66700FD6D07 /* AddReleaseDateRouter.swift in Sources */,
+				95BCFA112932655000FD6D07 /* DetailPresenter.swift in Sources */,
+				95BCFA0C2931FB5200FD6D07 /* AddYouTubeLinkRouter.swift in Sources */,
 				953386182924CBEF0048AA58 /* MainListRouter.swift in Sources */,
+				95BCF9FF2930F65900FD6D07 /* AddReleaseDateView.swift in Sources */,
 				953386072923F6060048AA58 /* MovieListApp.xcdatamodeld in Sources */,
 				953385FF2923F6060048AA58 /* SceneDelegate.swift in Sources */,
 				9533861E2924DD840048AA58 /* AddNewFilmPresenter.swift in Sources */,
@@ -342,6 +606,7 @@
 		};
 		953386112923F6070048AA58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F88634EF2654FEB85573078 /* Pods-MovieListApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -369,6 +634,7 @@
 		};
 		953386122923F6070048AA58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 609DCBA47444FE16C8FCFC06 /* Pods-MovieListApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
