@@ -30,4 +30,4 @@ C --> B
 
 
 
-![Альтернативный текст](/Users/danek/Desktop/screenOne.jpg)
+![Альтернативный текст](/Users/danek/Desktop/screenOne.png)
