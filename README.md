@@ -30,4 +30,5 @@ C --> B
 
 
 
-![Альтернативный текст](/Users/danek/Desktop/screenOne.png)
+![screenOne](https://user-images.githubusercontent.com/99253701/205009251-ffa16202-c5fc-4c46-932b-84dd01e5a892.png)
+
