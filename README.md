@@ -2,6 +2,14 @@
 
 A training project for storing movies added by you.
 
+## MVP Architecture
+```mermaid
+graph LR
+A(Model) --> B(Presenter)
+B --> C(View)
+C --> B
+```
+
 ## Technology
 ```sh
 UIKit
@@ -14,15 +22,6 @@ Cocoapods
 ```
 ```sh
 SnapKit
-```
-
-
-## MVP Architecture
-```mermaid
-graph LR
-A(Model) --> B(Presenter)
-B --> C(View)
-C --> B
 ```
 
 ### Application Overview
