@@ -30,4 +30,4 @@ C --> B
 
 
 
-![Альтернативный текст](/Users/danek/Desktop/Screenshot 2022-12-01 at 11.49.41.png)
+![Альтернативный текст](/Users/danek/Desktop/Screenshot2022-12-01at11.49.41.png)
