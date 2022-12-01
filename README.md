@@ -28,4 +28,4 @@ C --> B
 ### Application Overview
 
 
-/Users/danek/Desktop/Simulator\ Screen\ Shot\ -\ iPhone\ 14\ -\ 2022-12-01\ at\ 11.24.43.png
+![](/Users/danek/Desktop/Simulator\ Screen\ Shot\ -\ iPhone\ 14\ -\ 2022-12-01\ at\ 11.24.43.png)
