@@ -30,4 +30,4 @@ C --> B
 
 
 
-![Альтернативный текст](/Users/danek/Desktop/SimulatorScreenShot-iPhone14-2022-12-01at11.24.43.jpg)
+![Альтернативный текст](/Users/danek/Desktop/screenOne.jpg)
